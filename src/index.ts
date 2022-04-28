@@ -4,6 +4,6 @@ export class BowlingGame {
     return this.score
   }
   turnScores(firstTryBall: number, secondTryBall: number) {
-    this.score = firstTryBall + secondTryBall
+    this.score += firstTryBall + secondTryBall
   }
 }
