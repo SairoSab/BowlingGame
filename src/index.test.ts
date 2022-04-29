@@ -51,5 +51,39 @@ describe("BowlingGame", () => {
 
     expect(score).toEqual(totalScore);
   })
-  
+  it("scores eight consecutive strikes knocking down all the pins in the first try", () => {
+    const totalScore = 210;
+    let bowlingGame = new BowlingGame()
+    bowlingGame.turnScores(10, 0)
+    bowlingGame.turnScores(10, 0)
+    bowlingGame.turnScores(10, 0)
+    bowlingGame.turnScores(10, 0)
+    bowlingGame.turnScores(10, 0)
+    bowlingGame.turnScores(10, 0)
+    bowlingGame.turnScores(10, 0)
+    bowlingGame.turnScores(10, 0)
+
+    const score = bowlingGame.actualScore();
+
+    expect(score).toEqual(totalScore);
+  })
+  it("scores ten consecutive strikes knocking down all the pins in the first try", () => {
+    const totalScore = 270;
+    let bowlingGame = new BowlingGame()
+    bowlingGame.turnScores(10, 0)
+    bowlingGame.turnScores(10, 0)
+    bowlingGame.turnScores(10, 0)
+    bowlingGame.turnScores(10, 0)
+    bowlingGame.turnScores(10, 0)
+    bowlingGame.turnScores(10, 0)
+    bowlingGame.turnScores(10, 0)
+    bowlingGame.turnScores(10, 0)
+    bowlingGame.turnScores(10, 0)
+    bowlingGame.turnScores(10, 0)
+    
+    const score = bowlingGame.actualScore();
+
+    expect(score).toEqual(totalScore);
+  })
+
 })
